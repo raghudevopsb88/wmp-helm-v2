@@ -20,6 +20,7 @@ spec:
       initContainers:
       - name: ssm-pull
         image: 739561048503.dkr.ecr.us-east-1.amazonaws.com/ssm-pull:latest
+        imagePullPolicy: Always
         volumeMounts:
         - name: params
           mountPath: /data
