@@ -17,22 +17,22 @@ resource "aws_ssm_parameter" "values" {
 variable "inputs" {
   default = [
     {
-      name  = "analytics-service/DATABASE_URL"
+      name  = "/analytics-service/DATABASE_URL"
       type  = "SecureString"
       value = "postgresql+asyncpg://analytics_svc_user:localdev123@wmp-dev.cbvsbeoyxek4.us-east-1.rds.amazonaws.com:5432/wmp"
     },
     {
-      name  = "analytics-service/DB_SCHEMA"
+      name  = "/analytics-service/DB_SCHEMA"
       type  = "String"
       value = "analytics_schema"
     },
     {
-      name  = "analytics-service/LOG_LEVEL"
+      name  = "/analytics-service/LOG_LEVEL"
       type  = "String"
       value = "INFO"
     },
     {
-      name  = "analytics-service/ENVIRONMENT"
+      name  = "/analytics-service/ENVIRONMENT"
       type  = "String"
       value = "production"
     }
