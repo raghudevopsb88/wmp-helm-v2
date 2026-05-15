@@ -9,9 +9,9 @@ terraform {
 
 resource "aws_ssm_parameter" "values" {
   count = length(var.inputs)
-  name  = lookup(var.inputs[count.index], name, "")
-  type  = lookup(var.inputs[count.index], type, "")
-  value = lookup(var.inputs[count.index], value, "")
+  name  = lookup(var.inputs[count.index], "name", "")
+  type  = lookup(var.inputs[count.index], "type", "")
+  value = lookup(var.inputs[count.index], "value", "")
 }
 
 variable "inputs" {
